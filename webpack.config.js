@@ -12,7 +12,9 @@ module.exports = {
       exposes: {
         "./CartShow": "./src/index",
       },
-      shared: ["faker"],
+      shared: {
+        faker: { singleton: true },
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./dist/index.html",
